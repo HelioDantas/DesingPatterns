@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-sm">
-        <form action="/teste/carroAbstractfactory" method="post">
+        <form action="carroAbstractfactory" method="post">
             <div id = 'luxo2' class="card border-primary mb-2" style="max-width: 10rem;cursor: pointer;" onclick="carro('#luxo')">
                 <div class="card-body text-primary">
                     <img width="120px" src="public/img/luxo.jpg">

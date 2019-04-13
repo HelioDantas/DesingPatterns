@@ -10,7 +10,7 @@ require 'header.php' ?>
 
 <div class="row">
     <div class="col-sm">
-        <form action="/teste/factory" method="post">
+        <form action="factory" method="post">
             <div id = 'LiuKang2' class="card border-primary mb-2" style="max-width: 10rem;">
                 <div class="card-body text-primary">
                     <img width="80px" src="public/img/LiuKang.jpg">
