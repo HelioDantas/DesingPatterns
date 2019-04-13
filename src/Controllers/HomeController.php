@@ -4,11 +4,19 @@ namespace App\Controllers;
 
 use App\Model\Empresa;
 use App\Model\Endereco;
-use App\Model\FactoryMethod;
+use App\Service\HomeService;
+use Slim\Container;
 
 
 class HomeController extends Controller
 {
+  private  $factoryMethodService;
+
+    public function __construct(Container $container)
+    {
+        $this->factoryMethodService = new HomeService();
+        parent::__construct($container);
+    }
 
     public function home ($request, $response, $args) {
 
@@ -51,9 +59,7 @@ class HomeController extends Controller
     public function factoryMethod($request, $response, $args) {
 
         $paran = $request->getParams();
-        $personagemParametro = isset($paran['personagem']) ? $paran['personagem']: '';
-        $factoy = new FactoryMethod();
-        $personagem = $factoy->escolherPersonagem($personagemParametro);
+        $personagem = $this->factoryMethodService->factoyMethod($paran);
 
         return $this->view->render($response, 'factoryMethod.php', compact('personagem'));
     }
@@ -61,5 +67,18 @@ class HomeController extends Controller
     public function mortalKombat($request, $response, $args) {
 
         return $this->view->render($response, 'factoryMethod.php');
+    }
+
+    public  function carrosAbstractfactory($request, $response, $args) {
+
+        return $this->view->render($response, 'abstractFactory.php');
+    }
+
+    public  function carroAbstractfactory($request, $response, $args) {
+
+        $paran = $request->getParams();
+        $carro = $this->factoryMethodService->abstractFactory($paran);
+
+        return $this->view->render($response, 'abstractFactory.php', compact('carro'));
     }
 }

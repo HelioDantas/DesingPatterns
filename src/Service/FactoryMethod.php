@@ -6,15 +6,18 @@
  * Time: 10:37
  */
 
-namespace App\Model;
+namespace App\Service;
 
+use App\Model\LiuKang;
+use App\Model\SubZero;
+use App\Model\Scorpin;
+use App\Model\ErroPersonagem;
 
 
 class FactoryMethod
 {
 
-    public function escolherPersonagem( $personagem) {
-
+    public function escolherPersonagem($personagem) {
 
         switch ($personagem)
         {
