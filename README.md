@@ -1,0 +1,1 @@
+Esse é um projeto feito com framework Slim com exemplos de Desing patterns

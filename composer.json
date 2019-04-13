@@ -1,0 +1,22 @@
+{
+    "name": "vendor/son",
+    "authors": [
+        {
+            "name": "Helio dantas",
+            "email": "helio.dantas@celsolisboa.edu.br",
+            "email2": "helio_dantas@outlook.com"
+
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "slim/twig-view": "^2.5"
+    },
+	"autoload":{
+        "psr-4": {
+
+            "App\\": "src/"}
+    }
+	
+	
+}
